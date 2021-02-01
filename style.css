@@ -70,7 +70,9 @@
     border-bottom-right-radius: 30px 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen 
+    and (max-width: 600px) 
+    and (-webkit-device-pixel-ratio: 3) {
     #numberdisplay {
         width: 25vw;
         height: 14vw;
