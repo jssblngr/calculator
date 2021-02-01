@@ -69,3 +69,19 @@
 .bottomright {
     border-bottom-right-radius: 30px 30px;
 }
+
+@media only screen and (max-width: 600px) {
+    #numberdisplay {
+        width: 25vw;
+        height: 14vw;
+        font-size: 12vw;
+    }
+    #calculator {
+        width: 90vw;
+    }
+    .button {
+        height: 12vh;
+        font-size: 10vw;
+        padding-top: 6vw;
+    }
+  }
