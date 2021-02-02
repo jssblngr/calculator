@@ -21,13 +21,14 @@ const seven = document.getElementById("seven");
 const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
+
 const period = document.getElementById("period");
 
 const equals = document.getElementById("equals");
 
 clear.addEventListener("click", clearDisplay)
 posneg.addEventListener("click", setPosNeg)
-precentage.addEventListener("click", blankfunct)
+precentage.addEventListener("click", percent)
 add.addEventListener("click", addition)
 subtract.addEventListener("click", subtraction)
 multiply.addEventListener("click", multiplication)
@@ -44,6 +45,7 @@ seven.addEventListener("click",() => numEntry(7))
 eight.addEventListener("click",() => numEntry(8))
 nine.addEventListener("click",() => numEntry(9))
 zero.addEventListener("click",() => numEntry(0))
+
 period.addEventListener("click",() => numEntry("."))
 
 function blankfunct() {
@@ -126,6 +128,16 @@ function division() {
     display = 0;
     setDisplay();
     flag = "div";
+}
+
+function percent() {
+    if (display == 0){
+        return;
+    }
+    display = display * 0.01;
+    flag = "";
+    setDisplay();
+    store = 0;
 }
 
 function equal() {
