@@ -95,36 +95,28 @@ function clearDisplay() {
 }
 
 function addition() {
-    if (store == 0){
-        store = display;
-    }
+    store = display;
     display = 0;
     setDisplay();
     flag = "add";
 }
 
 function subtraction() {
-    if (store == 0){
-        store = display;
-    }
+    store = display;
     display = 0;
     setDisplay();
     flag = "sub";
 }
 
 function multiplication() {
-    if (store == 0){
-        store = display;
-    }
+    store = display;
     display = 0;
     setDisplay();
     flag = "times";
 }
 
 function division() {
-    if (store == 0){
-        store = display;
-    }
+    store = display;
     display = 0;
     setDisplay();
     flag = "div";
