@@ -1,6 +1,9 @@
 let display = 0
 let store = 0
+let store2 = 0
 let flag = ""
+let clearflag = 0
+let equalflag = 0
 
 const clear = document.getElementById("clear");
 const posneg = document.getElementById("posneg");
@@ -48,12 +51,11 @@ zero.addEventListener("click",() => numEntry(0))
 
 period.addEventListener("click",() => numEntry("."))
 
-function blankfunct() {
-    console.log("Hey you clicked the thing!");
-    setDisplay();
-}
-
 function numEntry(x) {
+    if(clearflag == 1) {
+        clearDisplay();
+        clearflag = 0;
+    }
     let numdisplay = display.toString();
     let numdisplayarr = numdisplay.split("");
     if(numdisplay.length < 8) {
@@ -90,36 +92,53 @@ function setPosNeg() {
 }
 
 function clearDisplay() {
-    display = 0;
+    display = "";
     setDisplay();
 }
 
 function addition() {
+    if(equalflag == 1) {
+        equal();
+        equalflag = 0;
+        flag = "";
+    }
     store = display;
-    display = 0;
-    setDisplay();
     flag = "add";
+    clearflag = 1;
+    equalflag = 1;
 }
 
 function subtraction() {
+    if(equalflag == 1) {
+        equal();
+        equalflag = 0;
+    }
     store = display;
-    display = 0;
-    setDisplay();
     flag = "sub";
+    clearflag = 1;
+    equalflag = 1;
 }
 
 function multiplication() {
+    if(equalflag == 1) {
+        equal();
+        equalflag = 0;
+    }
     store = display;
-    display = 0;
-    setDisplay();
     flag = "times";
+    clearflag = 1;
+    equalflag = 1;
 }
 
 function division() {
+    if(equalflag == 1) {
+        equal();
+        equalflag = 0;
+    }
     store = display;
-    display = 0;
-    setDisplay();
     flag = "div";
+    clearflag = 1;
+    equalflag = 1;
 }
 
 function percent() {
