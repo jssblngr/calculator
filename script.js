@@ -3,7 +3,6 @@ let store = 0
 let store2 = 0
 let flag = ""
 let clearflag = 0
-let equalflag = 0
 
 const clear = document.getElementById("clear");
 const posneg = document.getElementById("posneg");
@@ -24,7 +23,6 @@ const seven = document.getElementById("seven");
 const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
-
 const period = document.getElementById("period");
 
 const equals = document.getElementById("equals");
@@ -97,48 +95,31 @@ function clearDisplay() {
 }
 
 function addition() {
-    if(equalflag == 1) {
-        equal();
-        equalflag = 0;
-        flag = "";
-    }
+    equal();
     store = display;
     flag = "add";
     clearflag = 1;
-    equalflag = 1;
 }
 
 function subtraction() {
-    if(equalflag == 1) {
-        equal();
-        equalflag = 0;
-    }
+    equal();
     store = display;
     flag = "sub";
     clearflag = 1;
-    equalflag = 1;
 }
 
 function multiplication() {
-    if(equalflag == 1) {
-        equal();
-        equalflag = 0;
-    }
+    equal();
     store = display;
     flag = "times";
     clearflag = 1;
-    equalflag = 1;
 }
 
 function division() {
-    if(equalflag == 1) {
-        equal();
-        equalflag = 0;
-    }
+    equal();
     store = display;
     flag = "div";
     clearflag = 1;
-    equalflag = 1;
 }
 
 function percent() {
@@ -184,4 +165,3 @@ function equal() {
         store = 0;
     }
 }
-
